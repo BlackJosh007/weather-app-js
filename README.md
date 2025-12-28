@@ -6,6 +6,9 @@ A simple weather application built with JavaScript that fetches real-time weathe
 ## Live Demo
 https://blackjosh007.github.io/weather-app-js/
 
+## Screenshots
+
+![Weather App Screenshot](screenshots/Desktop_view.png)
 
 ## Features
 - Search weather by city
