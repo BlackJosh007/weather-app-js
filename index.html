@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="app-container">
+        <header>
+            <h1>WEATHER FIND</h1>
+
+            <input type="text" name="searchCity" id="searchCity" placeholder="Search City">
+            <button type="submit" class="search-btn">
+                <div class="img-container">
+                    <img src="search.png" alt="Search-image" width="512" height="512">
+                </div>
+            </button>
+            <p class="error"></p>
+        </header>
+
+        <section class="Main-card">
+            <h2 id="displayCity"></h2>
+            <p id="dateDisplay"></p>
+            <img src="weather.png" alt="weatherOrig" class="img-container Main-weather">
+
+            <div class="weather-info">
+                <div class="weather-box">
+                    <div class="title_icon">
+                        <h3 class="header-3">Temperature</h3>
+                        <div class="img-container api">
+                            <img src="temperature-icon-png-11084.png" alt="temp-icon">
+                        </div>
+
+                    </div>
+                    <p id="temp"></p>
+
+                </div>
+
+                <div class="weather-box">
+                    <h3 class="header-3">Feels like</h3>
+                    <p id="feelsLike"></p>
+                </div>
+                <div class="weather-box">
+                    <div class="title_icon">
+                        <h3 class="header-3">Humidity</h3>
+                        <div class="img-container api">
+                            <img src="humidity.png" alt="humidity">
+                        </div>
+                    </div>
+                    <p id="humidity"></p>
+                </div>
+
+                <div class="weather-box">
+                    <div class="title_icon">
+                        <h3 class="header-3">Wind Speed</h3>
+                        <div class="img-container api">
+                            <img src="—Pngtree—vector wind icon_4239293.png" alt="Windspeed">
+                        </div>
+                    </div>
+
+                    <p id="wind-speed"></p>
+                </div>
+                <div class="weather-box">
+                    <div class="title_icon">
+                        <h3 class="header-3">Wind Direction</h3>
+                        <div class="img-container api">
+                            <img src="wind-direction-weather-map-symbol-wind-4d59a0ffa2d73bc4250cc4b55de6083f.png"
+                                alt="windDirection">
+                        </div>
+                    </div>
+
+                    <p id="wind-degree"></p>
+                </div>
+
+                <div class="weather-box">
+                    <div class="title_icon">
+                        <h3 class="header-3">Condition</h3>
+                        <div class="img-container api">
+                            <img src="condition.png" alt="condition">
+                        </div>
+                    </div>
+
+                    <p id="condition"></p>
+                </div>
+            </div>
+
+
+        </section>
+
+
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+fon
+
+</body>
+
+</html> -->

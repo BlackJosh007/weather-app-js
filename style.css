@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-gradient-1: #0F2027;
+    /*Start of dark gradient */
+    --bg-gradient-2: #203A43;
+    /* Middle */
+    --bg-gradient-3: #2C5364;
+
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    /* Card translucent background */
+    --glass-border: rgba(255, 255, 255, 0.15);
+    /* Card border  */
+    --glass-input-bg: rgba(255, 255, 255, 0.2);
+
+
+    /* SEARCH BAR */
+    --error-red: #ff6b6b;
+    /* Error message */
+    --text-primary: #ffffff;
+    /* Main text  */
+    --text-secondary: rgba(255, 255, 255, 0.8);
+
+    /* CONDITIONAL TEXT */
+    --shadow-dark: rgba(0, 0, 0, 0.25);
+    /* Glass card shadow */
+
+    /* Spacing System  */
+    --space-1: 4px;
+    /* icon spacing */
+    --space-2: 8px;
+    /* small gap */
+    --space-3: 12px;
+    /* input padding */
+    --space-4: 16px;
+    /* small card padding */
+    --space-5: 20px;
+    /* normal padding */
+    --space-6: 24px;
+    /* search + card padding */
+    --space-8: 32px;
+    /* large gaps */
+    --space-9: 0 40px;
+    /* spacing between big sections */
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to top, var(--bg-gradient-1), var(--bg-gradient-2), var(--bg-gradient-3));
+    padding: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* MAIN */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HEADER */
+h1 {
+    text-align: center;
+}
+
+/* SEARCH BAR STYLING */
+input {
+    background-color: var(--glass-input-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    width: calc(70vw - 3rem);
+    min-width: calc(60vw - 3rem);
+    max-width: calc(75vw - 3rem);
+    height: 5vh;
+    border-radius: 5px 0px 0px 5px;
+    color: var(--text-primary);
+    position: relative;
+    padding: var(--space-3);
+    margin-top: var(--space-8);
+}
+
+/* Main Glass Card Styling */
+.Main-card {
+    margin-top: var(--space-8);
+    background: var(--glass-bg);
+    width: 48vw;
+    min-width: 45vw;
+    max-width: 50vw;
+    height: auto;
+    min-height: 40vh;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+}
+
+/* Error Paragraph Styling */
+.error {
+    color: var(--error-red);
+}
+
+/* SEARCH BUTTON ICON*/
+.search-btn {
+    height: 5vh;
+    width: 3rem;
+    position: absolute;
+    margin-top: var(--space-8);
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: var(--glass-input-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* IMAGE CONTAINER */
+.img-container {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* SEARCH ICON */
+.img-container img {
+    width: 1rem;
+    height: 100%;
+    /*  object-fit: contain; */
+    /* position: relative; */
+
+    right: 0;
+}
+
+
+/* Styling the City and Country Header */
+#displayCity {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+/* Styling Dynamic Date Paragraph */
+#dateDisplay {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-weight: 200;
+}
+
+/* Weather Info Container */
+.weather-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Each Weather Para B0X */
+.weather-box {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+    min-height: 8vh;
+    /* height: 8vh; */
+    padding: 0.5rem;
+}
+
+h3 {
+    display: none;
+    font-weight: 300;
+    font-size: 13px;
+    color: var(--text-secondary);
+    filter: brightness(80%);
+    margin-top: -5px;
+}
+
+h3.active {
+    display: block;
+}
+
+/* Styling Icon and Title */
+/* Weather Parameters */
+.api {
+    margin-top: -5px;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.title_icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Big weather Icon */
+.Main-weather {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* API endpoits Paragraphs */
+.weather-box p {
+    font-size: 20px;
+}
