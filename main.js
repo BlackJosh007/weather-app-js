@@ -11,6 +11,8 @@ const humidityE = document.querySelector('#humidity');
 const windSpeed = document.querySelector('#wind-speed');
 const windDirection = document.querySelector('#wind-degree');
 const condition = document.querySelector('#condition');
+const loader = document.getElementById("loader");
+
 
 
 let city;
@@ -31,9 +33,11 @@ console.log(click)
 
 
 async function getForecast(city) {
-
+    loader.classList.remove("hidden");
     try {
         const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=7f1c8c5f2d6f4607b417119c28ac63c7`;
+
+
 
         const response = await fetch(url)
         /* console.log(response) */
@@ -146,6 +150,9 @@ async function getForecast(city) {
         errorText.innerHTML = err.message;
     }
 
+    finally {
+        loader.classList.add("hidden");
+    }
 
 
 };
