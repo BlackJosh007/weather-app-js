@@ -95,10 +95,12 @@ async function getForecast(city) {
                 closestDifference = diff;
                 closestForecast = item;
             }
+            console.log(dataList[item])
 
         });
 
         console.log(closestForecast)
+
         /* Onject_Parent Keys */
         const mainObj = closestForecast.main;
         const windObj = closestForecast.wind;

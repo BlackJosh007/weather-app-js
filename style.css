@@ -72,6 +72,12 @@ body {
 /* HEADER */
 h1 {
     text-align: center;
+    margin-top: 1rem;
+    color: transparent;
+    background: linear-gradient(90deg, #3A86FF, #2EC4B6);
+    -webkit-background-clip: text;
+    animation: weather;
+    font-weight: 600;
 }
 
 /* SEARCH BAR STYLING */
@@ -80,10 +86,14 @@ input {
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-    width: calc(70vw - 3rem);
+    width:
+        /* calc(70vw - 3rem) */
+        100%;
     min-width: calc(60vw - 3rem);
-    max-width: calc(75vw - 3rem);
-    height: 5vh;
+    max-width:
+        /* calc(75vw - 5rem) */
+        400px;
+    height: 40px;
     border-radius: 5px 0px 0px 5px;
     color: var(--text-primary);
     position: relative;
@@ -99,11 +109,32 @@ input {
     min-width: 45vw;
     max-width: 50vw;
     height: auto;
-    min-height: 40vh;
+    min-height: 20vh;
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
     padding: 1rem;
+}
+
+/* Hourly Forecast */
+.hourlyF {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    width: 78vw;
+    min-width: 45vw;
+    height: auto;
+    min-height: 20vh;
+}
+
+/* Hourly Heading */
+h4 {
+    font-weight: 400;
+    filter: brightness(90%);
 }
 
 /* Error Paragraph Styling */
@@ -113,7 +144,7 @@ input {
 
 /* SEARCH BUTTON ICON*/
 .search-btn {
-    height: 5vh;
+    height: 40px;
     width: 3rem;
     position: absolute;
     margin-top: var(--space-8);
@@ -174,7 +205,8 @@ input {
     border: 1px solid var(--glass-border);
     border-radius: 8px;
     backdrop-filter: blur(8px);
-    min-height: 8vh;
+    min-height: 15px;
+
     /* height: 8vh; */
     padding: 0.5rem;
 }
@@ -234,5 +266,35 @@ h3.active {
 @keyframes spin {
     to {
         transform: rotate(360deg);
+    }
+}
+
+/* MEDIA QUERIESS */
+/* Small screen 320px */
+@media screen and (min-width: 320px) {
+    .weather-info {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .weather-info {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* Laptops / desktops */
+@media screen and (min-width: 1024px) {
+    .weather-info {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Large desktops / wide monitors */
+@media screen and (min-width: 1440px) {
+    .weather-info {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
